@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'calculadora';
+  numero1:number= 0;
+  numero2:number=0;
+  @Input() resultado:number=0
+
+  actualizarResultado(num:number ){
+    this.resultado=num
+    console.log(this.resultado);
+  }
+
+
 }
